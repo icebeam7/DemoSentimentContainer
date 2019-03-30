@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Local Sentiment Analysis"
+             x:Class="DemoSentimentContainer.Pages.SentimentAnalysisPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" Padding="10">
+            <Label Text="Language" TextColor="Blue" FontSize="Large"/>
+
+            <Entry x:Name="LanguageEntry" TextColor="White" Text="en" 
+                   PlaceholderColor="LightGray" BackgroundColor="Black" FontSize="Medium"/>
+
+            <Label Text="Message" TextColor="Blue" FontSize="Large"/>
+
+            <Entry x:Name="MessageEntry" TextColor="White" Placeholder="Text..." 
+                   PlaceholderColor="LightGray" BackgroundColor="Black" FontSize="Medium"/>
+
+            <Button x:Name="AnalyzeButton" Text="Analyze text" TextColor="White"
+                        BackgroundColor="#0072BD" FontSize="Medium" Clicked="AnalyzeButton_Clicked"/>
+
+            <ActivityIndicator x:Name="indicator" Color="Green" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Label Text="Score" FontSize="Large" TextColor="Gray"/>
+            <Label x:Name="ScoreLabel" Text="0.00" TextColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
